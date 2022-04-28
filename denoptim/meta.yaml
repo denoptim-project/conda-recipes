@@ -1,0 +1,38 @@
+{% set version = "3.0.2" %}
+{% set sha256 = "9d3b3c5a9bb8f65de9d56afd84ab865774fe0dac50dec14525285bd3d4981051" %}
+{% set openjdk_version = "11.0.*" %}
+
+package:
+  name: denoptim
+  version: {{ version }}
+
+source:
+  url: https://github.com/denoptim-project/DENOPTIM/archive/refs/tags/v3.0.2-beta.zip
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - openjdk =={{ openjdk_version }}
+    - maven
+  run:
+    - openjdk =={{ openjdk_version }}
+
+test:
+  commands:
+    - denoptim -v
+
+about:
+  home: https://github.com/denoptim-project/DENOPTIM
+  license: AGPL-3.0-only
+  license_file: LICENSE.txt
+  summary: 'Package for de novo design and virtual screening of functional molecules of any kind.'
+  description: Package for de novo design and virtual screening of functional molecules of any kind.
+  dev_url: https://github.com/denoptim-project/DENOPTIM
+  doc_url: https://github.com/denoptim-project/DENOPTIM
+
+extra:
+  recipe-maintainers:
+    - marco-foscato
