@@ -1,5 +1,5 @@
-{% set version = "3.1.1" %}
-{% set sha256 = "19de46bd0b9b0a63a1cc9af1626a455ed733167f9cfcbf6fd4646e33506d4349" %}
+{% set version = "3.1.2" %}
+{% set sha256 = "98efc922c5f319f5b237ff86e728528569c0cc028139b39236750c8a75c09ca8" %}
 {% set openjdk_version = "11.0.*" %}
 
 package:
@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/denoptim-project/DENOPTIM/archive/refs/tags/v3.1.1.zip 
+  url: https://github.com/denoptim-project/DENOPTIM/archive/refs/tags/v3.1.2.zip 
   sha256: {{ sha256 }}
 
 build:
